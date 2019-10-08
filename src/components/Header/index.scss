@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:600&display=swap&subset=cyrillic');
+
+.header {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background: #fff;
+    height: 90px;
+    box-shadow: 0 2px 3px 1px #38383854;
+    z-index: 100;
+    
+    .header-cover {
+        display: flex;
+        justify-content: space-between;
+        width: 1168px;
+        margin: auto;
+
+        .header__logo {
+            cursor: pointer;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 700;
+
+            & > div {
+                font-size: 2.4em;
+                padding: 17px;
+
+                span:first-of-type {
+                    color: #fbc35c;
+                }
+
+                span:last-of-type {
+                    color: #023ca3;
+                    margin-left: 5px;
+                }
+            }
+            
+        
+        }
+
+        .header__menu {
+            display: flex;
+            margin-left: auto;
+
+            .menu__item {
+                height: 90px;
+                font-size: 1.2em;
+                padding: 0px 30px;
+                display: flex;
+                align-items: center;
+
+                a {
+                    text-decoration: none;
+                    color: #353535;
+
+                    &::before {
+                        content: "";
+                        border-bottom: 1px solid;
+                    }
+                }
+            }
+        }
+
+        .profile {
+            padding: 34px 35px;
+            margin-left: 60px;
+            border-right: 1px solid #eee;
+            border-left: 1px solid #eee;
+            cursor: pointer;
+
+            img {
+                width: 20px;
+            }
+        }
+
+    }
+}
