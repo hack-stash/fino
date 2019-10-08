@@ -8,11 +8,12 @@ class WaitingPage extends Component {
 
         return (
             <main classNameName="waiting-page main">
+                <div className="cover"></div>
                 <div className="container mt-4 mb-4 d-flex justify-content-center">
                     <div className="card w-100">
                         <div className="card-body">
                             <h5 className="card-title">Ваша заявка принята</h5>
-                            <p className="card-text">В течении 2 дней ваша заявка будет проверна выбранными банками и вы полчите уведомление в личном кабинете и на почту.</p>
+                            <p className="card-text">В течение 2 дней ваша заявка будет проверена выбранными банками и вы получите уведомление в личном кабинете и на почту.</p>
                             <div className="d-block d-flex justify-content-center mt-4">
                                 <div className="loader"></div>
                             </div>
