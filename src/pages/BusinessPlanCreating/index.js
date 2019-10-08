@@ -95,7 +95,7 @@ class BusinessPlanPage extends Component {
                   <small className="form-text text-muted">Чем вы занимаетесь?</small>
                 </div>
                 <div className="form-group">
-                  <label>Товар/услуг</label>
+                  <label>Товар/услуга</label>
                   <input className="form-control" placeholder="Товар/услуг" />
                   <small className="form-text text-muted">Что вы продаете?</small>
                 </div>

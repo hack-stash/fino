@@ -83,7 +83,7 @@ class CreditServicesPage extends Component {
 		});
 		message.success("Заявка добавлена в обработку");
 	}
-	
+
 	render() {
 
 		return (
@@ -93,37 +93,37 @@ class CreditServicesPage extends Component {
 						<div className="title">
 							Параметры подбора
               			</div>
-						<div className="params">
-							<div className="block">
-								<Form layout="inline" onSubmit={this.handleSubmit}>
-									<Form.Item label="Срок">
-										<InputNumber
-											defaultValue={24}
-											min={0}
-											max={120}
-											formatter={value => `${value} мес.`}
-											parser={value => value.replace('мес.', '')}
-										/>
-									</Form.Item>
-								</Form>
-							</div>
-							<div className="block">
-								<Form layout="inline" onSubmit={this.handleSubmit}>
-									<Form.Item label="Необходимая сумма">
-										<Input placeholder="100 000 руб" />
-									</Form.Item>
-								</Form>
-							</div>
-							<div className="block">
-								<Form layout="inline" onSubmit={this.handleSubmit}>
-									<Form.Item label="Максимальный размер платежа">
-										<Input placeholder="10 000 руб" />
-									</Form.Item>
-								</Form>
+						<div>
+							<div className="card mt-4 mb-4">
+								<div className="card-body">
+									<h5 className="card-title">Параметры поиска</h5>
+									<p className="card-text">Задайте параметры и мы поможем подобрать наилучшие для вас продукты</p>
+									<form>
+										<div className="form-group">
+											<label >Сумма кредита</label>
+											<input className="form-control" placeholder="Сумма кредита" />
+											<small className="form-text text-muted">Укажиет необходимую сумму кредита</small>
+										</div>
+										<div className="form-group">
+											<label>Срок кредита</label>
+											<select className="form-control">
+												<option>1 год</option>
+												<option>2-3 года</option>
+												<option>3-5 лет</option>
+											</select>
+										</div>
+										<div className="form-group">
+											<label >Величина платежа</label>
+											<input className="form-control" placeholder="Величина платежа" />
+											<small className="form-text text-muted">Укажиет желаемый месячный платёж</small>
+										</div>
+										<button className="btn btn-light float-right">Расширенный фильтр</button>
+									</form>
+								</div>
 							</div>
 						</div>
 						<div className="result-title">
-							Подходщие кредиты
+							Подходящие кредиты
 						</div>
 					</div>
 				</div>
@@ -180,13 +180,13 @@ class CreditServicesPage extends Component {
 												}
 											</div>
 											<div className="column send-ticket">
-												<Button 
+												<Button
 													disabled={credit.sended}
 													size={"large"}
-													className={!credit.sended ? "active": "passive"}
+													className={!credit.sended ? "active" : "passive"}
 													onClick={e => this.sendTicket(index)}
-													>
-														{!credit.sended ? "Отправить заявку": "Будет отправлена"}
+												>
+													{!credit.sended ? "Отправить заявку" : "Будет отправлена"}
 												</Button>
 											</div>
 										</div>
